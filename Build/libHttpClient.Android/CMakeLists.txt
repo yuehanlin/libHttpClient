@@ -107,6 +107,11 @@ set(ANDROID_INCLUDE_DIRS
     "${PATH_TO_ROOT}/External/opensslGeneratedHeaders/android"
     )
 
+add_compile_options(
+    $<$<COMPILE_LANGUAGE:CXX>:-Wno-error=implicit-function-declaration>
+    $<$<COMPILE_LANGUAGE:C>:-Wno-error=implicit-function-declaration>
+)
+
 #########################
 ### Set up static lib ###
 #########################
